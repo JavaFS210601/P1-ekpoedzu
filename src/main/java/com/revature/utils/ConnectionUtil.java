@@ -34,7 +34,7 @@ public static void main(String[] args) {
 //			//We'll hardcode them for now, but we'll see how to hide this username/password in environment variables
 			String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=Project1";
 			String username = "postgres";
-			String password = ""; //this will be whatever password you set in postgres (or RDS if you're using that)
+			String password = "password"; //this will be whatever password you set in postgres (or RDS if you're using that)
 										  //hopefully you just left it as password...
 			//I've successfully hidden my DB credentials in my environment variables
 			//run -> run configurations -> environment -> add the environment variable key/pairs you want

@@ -85,7 +85,7 @@ async function filterReimbursementUnresolvedFunc() { //async returns a promise (
 
 
         //now, I want to put each avenger into my table
-        for(let ers_reimbursement of data) { //for every avenger in the data variable/object
+        for(let ers_reimbursement of data) { //for every reimbursement in the data variable/object
 
             console.log(ers_reimbursement); //just for debug, print the avenger in the console
 

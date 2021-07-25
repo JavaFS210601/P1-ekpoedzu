@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Manager Page</title>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+   <style>
+   
+body {
+
+    line-height: 200%;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    background-color:   rgb(41, 73, 83); ;
+}
+    </style>
+  </head>
+  <body>
+   
+    <div   class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        	<br />
+        	
+        	<ul class="nav nav-tabs">
+        		<li class="nav-item">
+        			<a href="#home"  class="nav-link active" role="tab" data-toggle="tab">Welcome</a>
+        		</li>
+
+                <li class="nav-item">
+        			<a href="#view" class="nav-link"  role="tab" data-toggle="tab">Info</a>
+        		</li>
+
+                <li class="nav-item">
+        			<a href="#update" class="nav-link" role="tab" data-toggle="tab">Update</a>
+                </li>
+                
+        		<li class="nav-item">
+        			<a href="#logout" class="nav-link"  role="tab" data-toggle="tab">Logout</a>
+                </li>
+                
+        	
+        	</ul>
+
+        	<div class="tab-content">
+        		<div role="tabpanel"  class="tab-pane fade in active" id="home">
+                    
+                </div>
+                <!----------------------Update-------------------->
+                <div role="tabpanel" class="tab-pane fade in active" id="update">
+                    <form onSubmit="approve(event.preventDefault())">
+                        <div class="form-group">
+                          <label for="upid"> Reimbursement Approved</label>
+                          <input type="text" class="form-control" id="upid" aria-describedby="Help" placeholder="Enter Id">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Update</button>
+                      </form>
+                      <br>
+                      
+                      <form onSubmit="deny(event.preventDefault())">
+                        <div class="form-group">
+                          <label for="did">Reimbursement Denied </label>
+                          <input type="text" class="form-control" id="did" aria-describedby="Help" placeholder="Enter Id">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Update</button>
+                      </form>
+                    
+                  <div id = "update"> </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="view">
+                    <form  onSubmit="viewEmp(event.preventDefault())">
+                        <input
+                            id="pbtn" class="btn btn-primary" type="submit" value=" Employees">
+                    </form>
+                    <br>
+
+                    <form  onSubmit="viewPend(event.preventDefault())">
+                        <input
+                            id="pbtn" class="btn btn-primary" type="submit" value=" Pending">
+                    </form>
+					 <br>
+                    <form  onSubmit="viewAppr(event.preventDefault())">
+                        <input
+                            id="pbtn" class="btn btn-primary" type="submit" value=" Approved">
+                    </form>
+                     <br>
+
+                    <form onSubmit="viewByA(event.preventDefault())">
+                        <div class="form-group" >
+                          <label for="eid">Search by Employee</label>
+                          <input type="text" class="form-control" id="eid" aria-describedby="Help" placeholder="Employee id">
+                          
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+					 <br>
+                    <div id = "viewDiv">
+	
+                    </div>
+
+                </div>
+                
+                <div role="tabpanel" class="tab-pane fade in active" id="logout">
+                    <form  onSubmit="logout(event.preventDefault())">
+                        <input
+                            id="pbtn" class="btn btn-primary" type="submit" value="Log Out">
+                    </form>
+                </div>
+        	</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src="js/manager.js"></script>
+     <script src="js/reimbursement.js"></script>
+    <a href = "Employee.html">Go to Employee Page</a> <br>
+    <a href = "index.html">Please, go back to the login page</a>
+  </body>
+</html>
